@@ -4,6 +4,7 @@
 body{
     margin:0;
     padding:0;
+    
 }
 .modal-button{
     padding: 1rem 2rem;
@@ -14,6 +15,7 @@ body{
     color:white;
     border-radius: 5px;
     transition: background-color 500ms ease-in-out;
+
 }
 .modal-button:hover{
     background-color: blueviolet;
@@ -21,6 +23,56 @@ body{
 .modal-button:focus{
     background-color:indianred;
 }
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight:bolder;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #333;
+}
+.close-button{
+    border:none;
+    background:none;
+    outline:none;
+    font-size: 1.4rem;
+    font-weight:bolder;
+    cursor:pointer;
+}
+.close-button:hover{
+    color: #666;
+}
+.modal-body{
+    padding: 1rem 1rem;
+}
 .modal{
-  
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0);
+    border: 1px solid #333;
+    word-wrap: none;
+    height: max-content;
+    z-index: 10;
+    background-color:white;
+    transition: 500ms ease;
+  }
+  .modal.active{
+      transform: translate(-50%,-50%) scale(1);
+  }
+.overlay{
+    background-color: rgba(0, 0, 0, 50%);
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:fixed;
+    transform: scale(0);
+    pointer-events: none;
+
+}
+.overlay.active{
+    transform: scale(1);
+    pointer-events: all;
 }
