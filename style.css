@@ -11,6 +11,7 @@ body{
     font-size: 1.2rem;
     border:none;
     cursor:pointer;
+    outline: none;
     background-color:hsla(220, 50%, 40%, 90%);
     color:white;
     border-radius: 5px;
